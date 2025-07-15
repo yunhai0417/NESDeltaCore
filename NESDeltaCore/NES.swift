@@ -62,6 +62,14 @@ public struct NES: DeltaCoreProtocol
     
     public var emulatorBridge: EmulatorBridging { NESEmulatorBridge.shared }
     
+    #if !STATIC_LIBRARY
+    public var resourceBundle: Bundle {
+        // Explicitly reference NESEmulatorBridge.self to avoid infinite loop when looking it up in NESEmulatorBridge.init().
+        let bundle = Bundle(for: NESEmulatorBridge.self)
+        return bundle
+    }
+    #endif
+    
     private init()
     {
     }

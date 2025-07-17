@@ -312,6 +312,20 @@
 			remoteGlobalIDString = BF2F702120BDCF93009114FF;
 			remoteInfo = libNestopia;
 		};
+		D59D6C092E29A38800DBAF5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D59D6C022E29A37600DBAF5B /* DeltaCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF46895D1AACF36800A2586D;
+			remoteInfo = DeltaCore;
+		};
+		D59D6C0B2E29A39700DBAF5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D59D6C022E29A37600DBAF5B /* DeltaCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BF46895C1AACF36800A2586D;
+			remoteInfo = DeltaCore;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -958,6 +972,7 @@
 		BF9DD5AA20C72BBB0098C38D /* nestopia.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = nestopia.js; sourceTree = "<group>"; };
 		BFEE181D20C21B01006A17CD /* NESEmulatorBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NESEmulatorBridge.swift; sourceTree = "<group>"; };
 		BFFBD3D62249B6E7002EFC79 /* Standard.deltaskin */ = {isa = PBXFileReference; lastKnownFileType = file; name = Standard.deltaskin; path = "Controller Skin/Standard.deltaskin"; sourceTree = "<group>"; };
+		D59D6C022E29A37600DBAF5B /* DeltaCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DeltaCore.xcodeproj; path = ../DeltaCore/DeltaCore.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1685,6 +1700,7 @@
 				BF3C12F520438F3F0079A4B5 /* NESDeltaCore */,
 				BF2F702B20BDCFA5009114FF /* libNestopia */,
 				BF5CA7EB20C1EDA200BDFCBC /* NestopiaJS */,
+				D52035E22E29A34300AF3B25 /* Dependencies */,
 				BF3C12F420438F3F0079A4B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1718,6 +1734,22 @@
 				BF9DD5AA20C72BBB0098C38D /* nestopia.js */,
 			);
 			path = NestopiaJS;
+			sourceTree = "<group>";
+		};
+		D52035E22E29A34300AF3B25 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				D59D6C022E29A37600DBAF5B /* DeltaCore.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		D59D6C062E29A38700DBAF5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D59D6C0A2E29A38800DBAF5B /* DeltaCore.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1781,6 +1813,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D59D6C0C2E29A39700DBAF5B /* PBXTargetDependency */,
 				BF2F73BD20BDD385009114FF /* PBXTargetDependency */,
 			);
 			name = NESDeltaCore;
@@ -1822,6 +1855,12 @@
 			mainGroup = BF3C12E920438F3F0079A4B5;
 			productRefGroup = BF3C12F420438F3F0079A4B5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D59D6C062E29A38700DBAF5B /* Products */;
+					ProjectRef = D59D6C022E29A37600DBAF5B /* DeltaCore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BF3C12F220438F3F0079A4B5 /* NESDeltaCore */,
@@ -1830,6 +1869,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D59D6C0A2E29A38800DBAF5B /* DeltaCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DeltaCore.framework;
+			remoteRef = D59D6C092E29A38800DBAF5B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BF3C12F120438F3F0079A4B5 /* Resources */ = {
@@ -2155,6 +2204,11 @@
 			isa = PBXTargetDependency;
 			target = BF2F702120BDCF93009114FF /* libNestopia */;
 			targetProxy = BF2F73BC20BDD385009114FF /* PBXContainerItemProxy */;
+		};
+		D59D6C0C2E29A39700DBAF5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DeltaCore;
+			targetProxy = D59D6C0B2E29A39700DBAF5B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
